@@ -102,6 +102,8 @@ class ExifRead:
         '''
         Name of file in the form {lat}_{lon}_{ca}_{datetime}_{filename}_{hash}
         '''
+        image_description = self.extract_image_description()
+
         lon, lat = self.extract_lon_lat()
         ca = self.extract_direction()
         if ca is None:
